@@ -23,6 +23,7 @@
 		C80FE55417BDAFAE00CB9650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80FE52F17BDAFAE00CB9650 /* Foundation.framework */; };
 		C80FE55C17BDAFAE00CB9650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C80FE55A17BDAFAE00CB9650 /* InfoPlist.strings */; };
 		C80FE55F17BDAFAE00CB9650 /* CITestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C80FE55E17BDAFAE00CB9650 /* CITestTests.m */; };
+		C80FE5A517BDED7E00CB9650 /* libCITestLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80FE5A217BDED5200CB9650 /* libCITestLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = C80FE52917BDAFAE00CB9650;
 			remoteInfo = CITest;
+		};
+		C80FE5A117BDED5200CB9650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C80FE59C17BDED5100CB9650 /* CITestLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C80FE57117BDED5100CB9650;
+			remoteInfo = CITestLib;
+		};
+		C80FE5A317BDED5200CB9650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C80FE59C17BDED5100CB9650 /* CITestLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C80FE58217BDED5100CB9650;
+			remoteInfo = CITestLibTests;
+		};
+		C80FE5A617BDEE0600CB9650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C80FE59C17BDED5100CB9650 /* CITestLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C80FE57017BDED5100CB9650;
+			remoteInfo = CITestLib;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,6 +80,7 @@
 		C80FE55B17BDAFAE00CB9650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C80FE55D17BDAFAE00CB9650 /* CITestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CITestTests.h; sourceTree = "<group>"; };
 		C80FE55E17BDAFAE00CB9650 /* CITestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CITestTests.m; sourceTree = "<group>"; };
+		C80FE59C17BDED5100CB9650 /* CITestLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CITestLib.xcodeproj; path = CITestLib/CITestLib.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80FE5A517BDED7E00CB9650 /* libCITestLib.a in Frameworks */,
 				C80FE52E17BDAFAE00CB9650 /* UIKit.framework in Frameworks */,
 				C80FE53017BDAFAE00CB9650 /* Foundation.framework in Frameworks */,
 				C80FE53217BDAFAE00CB9650 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +111,7 @@
 		C80FE52117BDAFAE00CB9650 = {
 			isa = PBXGroup;
 			children = (
+				C80FE59C17BDED5100CB9650 /* CITestLib.xcodeproj */,
 				C80FE53317BDAFAE00CB9650 /* CITest */,
 				C80FE55717BDAFAE00CB9650 /* CITestTests */,
 				C80FE52C17BDAFAE00CB9650 /* Frameworks */,
@@ -160,6 +185,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C80FE59D17BDED5100CB9650 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C80FE5A217BDED5200CB9650 /* libCITestLib.a */,
+				C80FE5A417BDED5200CB9650 /* CITestLibTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +208,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C80FE5A717BDEE0600CB9650 /* PBXTargetDependency */,
 			);
 			name = CITest;
 			productName = CITest;
@@ -218,6 +253,12 @@
 			mainGroup = C80FE52117BDAFAE00CB9650;
 			productRefGroup = C80FE52B17BDAFAE00CB9650 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C80FE59D17BDED5100CB9650 /* Products */;
+					ProjectRef = C80FE59C17BDED5100CB9650 /* CITestLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C80FE52917BDAFAE00CB9650 /* CITest */,
@@ -225,6 +266,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C80FE5A217BDED5200CB9650 /* libCITestLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCITestLib.a;
+			remoteRef = C80FE5A117BDED5200CB9650 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C80FE5A417BDED5200CB9650 /* CITestLibTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CITestLibTests.octest;
+			remoteRef = C80FE5A317BDED5200CB9650 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C80FE52817BDAFAE00CB9650 /* Resources */ = {
@@ -292,6 +350,11 @@
 			target = C80FE52917BDAFAE00CB9650 /* CITest */;
 			targetProxy = C80FE55517BDAFAE00CB9650 /* PBXContainerItemProxy */;
 		};
+		C80FE5A717BDEE0600CB9650 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CITestLib;
+			targetProxy = C80FE5A617BDEE0600CB9650 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -350,6 +413,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -374,6 +438,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -383,8 +448,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CITest/CITest-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "CITest/CITest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/CITestLib/CITestLib";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -394,8 +461,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CITest/CITest-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "CITest/CITest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/CITestLib/CITestLib";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
